@@ -28,23 +28,24 @@ public class TicketManagerImpl implements TicketManager {
 		this.parkingSlotsList = parkingSlotsList;
 	}
 
-	public void processInput(Input ip) {
-		
+	public String processInput(Input ip) {
+		return "";
 	}
 
-	public void createParkingLotAction(Input ip) {
-
+	public String createParkingLotAction(Input ip) {
+		return "";
 	}
 
-	public void parkAction(Input ip) {
-
+	public String parkAction(Input ip) {
+		return "";
 	}
 
-	public void leaveAction(Input ip) {
-
+	public String leaveAction(Input ip) {
+		return "";
 	}
 
-	public void statusAction(Input ip) {
+	public String statusAction(Input ip) {
+		return "";
 
 	}
 }

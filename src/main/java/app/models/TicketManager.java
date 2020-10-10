@@ -1,9 +1,9 @@
 package app.models;
 
 public interface TicketManager {
-	public void processInput(Input currentInput);
-	public void createParkingLotAction(Input ip);
-	public void parkAction(Input ip);
-	public void leaveAction(Input ip);
-	public void statusAction(Input ip);	
+	public String processInput(Input currentInput);
+	public String createParkingLotAction(Input ip);
+	public String parkAction(Input ip);
+	public String leaveAction(Input ip);
+	public String statusAction(Input ip);	
 }

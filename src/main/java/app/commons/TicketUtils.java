@@ -6,11 +6,11 @@ public class TicketUtils {
 
 	public static Boolean validateInput(String inputString) {
 		// TODO Auto-generated method stub
-		return false;
+		return null;
 	}
 
 	public static Input createInputObj(String inputString) {
 		// TODO Auto-generated method stub
-		return null;
+		return (new Input());
 	}
 }

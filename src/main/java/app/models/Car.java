@@ -4,6 +4,12 @@ public class Car {
 
 	private String carNumber;
 	private String carColor;
+	
+	public Car() {}
+	public Car(String carNumber, String carColor) {
+		this.carNumber = carNumber;
+		this.carColor = carColor;
+	}
 	public String getCarNumber() {
 		return carNumber;
 	}
@@ -16,5 +22,4 @@ public class Car {
 	public void setCarColor(String carColor) {
 		this.carColor = carColor;
 	}
-	
 }

@@ -8,6 +8,8 @@ public class Input {
 	private String carNumber;
 	private int parkingSlotNumber;
 	
+	public Input() {}
+	
 	public Input(Action nextAction, String carNumber, int totalSlots) {
 		this.nextAction = nextAction;
 		this.carNumber = carNumber;
@@ -17,6 +19,11 @@ public class Input {
 	public Input(Action nextAction, int totalSlots) {
 		this.nextAction = nextAction;
 		this.parkingSlotNumber = totalSlots;
+	}
+
+	public Input(Action nextAction, String carNumber) {
+		this.nextAction = nextAction;
+		this.carNumber = carNumber;
 	}
 
 	public Action getNextAction() {
