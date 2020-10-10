@@ -76,7 +76,7 @@ public class TicketUtilsTest {
 		Input outputToCheck = TicketUtils.createInputObj(input);
 		Assert.assertEquals(Input.Action.park, outputToCheck.getNextAction());
 		Assert.assertEquals("KA-01-HH-1234", outputToCheck.getCarNumber());
-		Assert.assertNull(outputToCheck.getParkingSlotNumber());
+		Assert.assertNotNull(outputToCheck.getParkingSlotNumber());
 	}
 
 	@Test
@@ -84,7 +84,7 @@ public class TicketUtilsTest {
 		String input = "leave KA-01-HH-3141 4";
 		Input outputToCheck = TicketUtils.createInputObj(input);
 		Assert.assertEquals(Input.Action.leave, outputToCheck.getNextAction());
-		Assert.assertEquals("KA-01-HH-1234", outputToCheck.getCarNumber());
+		Assert.assertEquals("KA-01-HH-3141", outputToCheck.getCarNumber());
 		Assert.assertEquals(4,outputToCheck.getParkingSlotNumber());
 	}
 
@@ -93,7 +93,7 @@ public class TicketUtilsTest {
 		String input = "create_parking_lot 6";
 		Input outputToCheck = TicketUtils.createInputObj(input);
 		Assert.assertEquals(Input.Action.create_parking_lot, outputToCheck.getNextAction());
-		Assert.assertNull(outputToCheck.getParkingSlotNumber());
+		Assert.assertEquals(outputToCheck.getParkingSlotNumber(), 0);
 		Assert.assertNull(outputToCheck.getCarNumber());
 	}
 
@@ -102,7 +102,7 @@ public class TicketUtilsTest {
 		String input = "status";
 		Input outputToCheck = TicketUtils.createInputObj(input);
 		Assert.assertEquals(Input.Action.status, outputToCheck.getNextAction());
-		Assert.assertNull(outputToCheck.getParkingSlotNumber());
+		Assert.assertEquals(outputToCheck.getParkingSlotNumber(),0);
 		Assert.assertNull(outputToCheck.getCarNumber());
 	}
 }

@@ -51,7 +51,26 @@ public class TicketUtils {
 	}
 
 	public static Input createInputObj(String inputString) {
-		// TODO Auto-generated method stub
-		return (new Input());
+		String[] tokens = inputString.split(" ");
+		Input ipObj = null ;
+
+		switch (tokens[0]) {
+		case "create_parking_lot" :
+			ipObj = new Input(Input.Action.create_parking_lot, Integer.parseInt(tokens[1]));
+			break;
+		case "park":
+			ipObj = new Input(Input.Action.park, tokens[1]);
+			break;
+		case "leave":
+			ipObj = new Input(Input.Action.leave, tokens[1], Integer.parseInt(tokens[2]));
+			break;
+		case "status":
+			ipObj = new Input(Input.Action.status);
+			break;
+
+		default:
+			throw new IllegalArgumentException("Incorrect Action Specified");
+		}
+		return ipObj;
 	}
 }
