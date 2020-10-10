@@ -65,7 +65,7 @@ public class TicketUtilsTest {
 
 	@Test
 	public void validateInputTestValidInputForStatusAction() {
-		String input = "status";
+		String input = Input.Action.status.toString();
 		Boolean outputToCheck = TicketUtils.validateInput(input);
 		Assert.assertTrue(outputToCheck);
 	}
