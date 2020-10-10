@@ -2,12 +2,23 @@ package app.models;
 
 public class Input {
 
-	enum Action  {create_parking_lot, park, leave, status};
+	public enum Action  {create_parking_lot, park, leave, status};
 	
 	private Action nextAction;
 	private String carNumber;
 	private int parkingSlotNumber;
 	
+	public Input(Action nextAction, String carNumber, int totalSlots) {
+		this.nextAction = nextAction;
+		this.carNumber = carNumber;
+		this.parkingSlotNumber = totalSlots;
+	}
+	
+	public Input(Action nextAction, int totalSlots) {
+		this.nextAction = nextAction;
+		this.parkingSlotNumber = totalSlots;
+	}
+
 	public Action getNextAction() {
 		return nextAction;
 	}

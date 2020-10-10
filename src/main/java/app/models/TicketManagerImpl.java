@@ -1,25 +1,50 @@
 package app.models;
 
+import java.util.HashMap;
+
 public class TicketManagerImpl implements TicketManager {
-	Integer[] parkingSlotsList;
 	
-	public void processInput(Input currentInput) {
+	private Integer[] parkingSlotsList;
+	private HashMap<String, ParkingTicket> parkedCars;
+	
+	public TicketManagerImpl() {
+		super();
+		parkedCars = new HashMap<String, ParkingTicket>();
+	}
+	
+	public HashMap<String, ParkingTicket> getParkedCars() {
+		return parkedCars;
+	}
+
+	public void setParkedCars(HashMap<String, ParkingTicket> parkedCars) {
+		this.parkedCars = parkedCars;
+	}
+
+	public Integer[] getParkingSlotsList() {
+		return parkingSlotsList;
+	}
+
+	public void setParkingSlotsList(Integer[] parkingSlotsList) {
+		this.parkingSlotsList = parkingSlotsList;
+	}
+
+	public void processInput(Input ip) {
 		
 	}
 
-	public void createParkingLotAction() {
+	public void createParkingLotAction(Input ip) {
 
 	}
 
-	public void parkAction() {
+	public void parkAction(Input ip) {
 
 	}
 
-	public void leavAction() {
+	public void leaveAction(Input ip) {
 
 	}
 
-	public void statusAction() {
+	public void statusAction(Input ip) {
 
 	}
 }
